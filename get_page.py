@@ -1,7 +1,4 @@
-import requests
-from html.parser import HTMLParser
-import json
-from address_parser import AddressParser
+import utils as utils
 
 # Save or process pages using your AddressParser
 
