@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TQFN486');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Western's Off-Campus Housing Rental Listing Service</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Rubik">
+
+    <link rel="stylesheet" type="text/css" href="/listings/css/global/housing_global_v2.css">
+    <link rel="stylesheet" type="text/css" href="/listings/css/global/housing_global_v2_800.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" type="text/css" href="/listings/css/global/housing_global_v2_480.css" media="screen and (max-width: 480px)">
+
+    <link rel="stylesheet" type="text/css" href="/listings/css/master.css" />
+    <link rel="stylesheet" type="text/css" href="/listings/css/HASCarousel.css" />
+    <link rel="stylesheet" type="text/css" href="/listings/css/CarouselMulti.css" />
+    <link rel="stylesheet" type="text/css" href="/listings/css/multiple-select.css" />
+    <link rel="stylesheet" type="text/css" href="/listings/css/FeaturedAds.css" />
+
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQFN486"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="branding">
+        <div class="logo-western"><a href="https://uwo.ca"><img src="//offcampus.uwo.ca/common_objects/branding_housing/logo_western.png" alt="Logo: Western"/></a></div>
+        <div class="logo-housing"><a href="https://housing.uwo.ca"><img src="//offcampus.uwo.ca/common_objects/branding_housing/logo_housing.jpg" alt="Logo: Housing"/></a></div>
+        <div class="branding-sitetitle">
+            <a href="https://offcampus.uwo.ca/">Off-Campus Housing Services</a>
+        </div>
+    </div>
+
+    <div class="clearfix" style="display: none;">&nbsp;</div>
+
+    <div id="menu">
+        <div class="menubox">
+            <a href="https://offcampus.uwo.ca/">offcampus.uwo.ca</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="content_option_a">
+            
+
+<button type="button" class="search_open_btn btn btn-listing-a">Search</button>
+
+<form class="search_listings_form" method="post" action="/Listings/SearchListings">
+    <input hidden class="desc_hidden" type="checkbox" checked="checked" data-val="true" data-val-required="The Desc field is required." id="Desc" name="Desc" value="true" />
+    <input hidden class="sort_hidden" type="text" id="Sort" name="Sort" value="" />
+    <input hidden class="page_number_hidden" type="number" data-val="true" data-val-required="The PageNumber field is required." id="PageNumber" name="PageNumber" value="0" />
+    <input hidden class="request-type" type="text" data-val="true" data-val-required="The requestType field is required." id="requestType" name="requestType" value="Normal" />
+
+    <div id="main-search">
+        <div class="grds">
+            <div class="grd-2">
+                <div class="rent-prices">
+                    <div class="floatleft">
+                        <div class="dollar-holder">Min. $</div>
+                        <input type="text" class="rent_input" data-val="true" data-val-required="The Min Rent field is required." id="MinimumRent" name="MinimumRent" value="0" />
+                    </div>
+
+                    <div class="floatright">
+                        <div class="dollar-holder">Max. $</div>
+                        <input type="text" class="rent_input" data-val="true" data-val-required="The Max Rent field is required." id="MaximumRent" name="MaximumRent" value="7000" />
+                    </div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="flexit">
+                    <div class="bedrooms_input">
+                        <label for="NumberOfBedrooms">Bedrooms</label><br />
+                        <select id="NumberOfBedrooms" name="NumberOfBedrooms"><option selected="selected" value="0">Any</option>
+<option value="1">0 - Bachelors</option>
+<option value="2">1</option>
+<option value="3">2</option>
+<option value="4">3</option>
+<option value="5">4</option>
+<option value="6">5</option>
+<option value="7">6 or more</option>
+</select>
+                    </div>
+                    <div class="mobile-hidden-filter half">
+                        <div>
+                            <label for="LocationsList">Locations</label><br />
+                            <select multiple="multiple" id="SelectedLocations" name="SelectedLocations"><option value="2">Downtown</option>
+<option value="1">Old North</option>
+<option value="3">Near South</option>
+<option value="4">Near West</option>
+<option value="5">Whitehills</option>
+<option value="6">Masonville</option>
+<option value="7">North London</option>
+<option value="8">Kipps Lane</option>
+<option value="10">East London</option>
+<option value="12">Old South</option>
+<option value="11">S. E. London</option>
+<option value="14">West London</option>
+<option value="13">S. W. London</option>
+<option value="9">N. E. London</option>
+<option value="15">Outside London</option>
+<option value="16">On Campus</option>
+</select>
+                        </div>
+                        <div class="clearfix">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grd-2 mobile-hidden-filter">
+                <div class="tenant_type">
+                    <label for="TenantTypeId">Tenant Type</label><br />
+                    <select id="TenantTypeId" name="TenantTypeId"><option selected="selected" value="0">Any</option>
+<option value="1">Staff/Faculty</option>
+<option value="2">Graduate Student(s)</option>
+<option value="3">Student</option>
+<option value="4">International/Exchange Student</option>
+</select>
+                </div>
+                <div class="housing_input">
+                    <label for="HousingTypesList">Housing Types</label><br />
+                    <select multiple="multiple" id="SelectedHousing" name="SelectedHousing"><option value="0">Bachelor Apt</option>
+<option value="1">Apartment</option>
+<option value="2">House</option>
+<option value="6">Apt to Share</option>
+<option value="7">House to Share</option>
+<option value="13">Rooms</option>
+<option value="11">Temporary</option>
+<option value="12">Sublets</option>
+</select>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div>
+                    <div class="distance_input">
+                        <label for="Distance">Distance from UWO</label><br />
+                        <select id="Distance" name="Distance"><option selected="selected" value="0">All Distances</option>
+<option value="1">&lt; 2km from UWO</option>
+<option value="2">2km - 4.9km from UWO</option>
+<option value="3">5.0km - 9.9km from UWO</option>
+<option value="4">&gt; 10km from UWO</option>
+</select>
+                    </div>
+
+                    <div class="posted_input">
+                        <label for="Posted">Posted</label><br />
+                        <select id="Posted" name="Posted"><option value="0">Anytime</option>
+<option value="1">Last 14 Days</option>
+</select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-hidden-filter">
+            <div class="clearfix">&nbsp;</div>
+            <div id="s-amenities-btn" class="btn btn-s-less">Amenities</div>
+            <div id="s-amenities" style="display: none;">
+                
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_0__IsSelected" name="AmenitiesCheckList[0].IsSelected" type="checkbox" value="true" />
+    Utilities Incl
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_0__Id" name="AmenitiesCheckList[0].Id" type="hidden" value="1" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_1__IsSelected" name="AmenitiesCheckList[1].IsSelected" type="checkbox" value="true" />
+    A/C
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_1__Id" name="AmenitiesCheckList[1].Id" type="hidden" value="2" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_2__IsSelected" name="AmenitiesCheckList[2].IsSelected" type="checkbox" value="true" />
+    Private Bathroom
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_2__Id" name="AmenitiesCheckList[2].Id" type="hidden" value="3" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_3__IsSelected" name="AmenitiesCheckList[3].IsSelected" type="checkbox" value="true" />
+    Furnished Bdrm(s)
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_3__Id" name="AmenitiesCheckList[3].Id" type="hidden" value="4" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_4__IsSelected" name="AmenitiesCheckList[4].IsSelected" type="checkbox" value="true" />
+    Furniture Incl
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_4__Id" name="AmenitiesCheckList[4].Id" type="hidden" value="5" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_5__IsSelected" name="AmenitiesCheckList[5].IsSelected" type="checkbox" value="true" />
+    Transit
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_5__Id" name="AmenitiesCheckList[5].Id" type="hidden" value="6" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_6__IsSelected" name="AmenitiesCheckList[6].IsSelected" type="checkbox" value="true" />
+    Laundry
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_6__Id" name="AmenitiesCheckList[6].Id" type="hidden" value="7" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_7__IsSelected" name="AmenitiesCheckList[7].IsSelected" type="checkbox" value="true" />
+    Dishwasher
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_7__Id" name="AmenitiesCheckList[7].Id" type="hidden" value="8" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_8__IsSelected" name="AmenitiesCheckList[8].IsSelected" type="checkbox" value="true" />
+    Parking
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_8__Id" name="AmenitiesCheckList[8].Id" type="hidden" value="9" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_9__IsSelected" name="AmenitiesCheckList[9].IsSelected" type="checkbox" value="true" />
+    Accessible
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_9__Id" name="AmenitiesCheckList[9].Id" type="hidden" value="10" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_10__IsSelected" name="AmenitiesCheckList[10].IsSelected" type="checkbox" value="true" />
+    Cable Incl
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_10__Id" name="AmenitiesCheckList[10].Id" type="hidden" value="11" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_11__IsSelected" name="AmenitiesCheckList[11].IsSelected" type="checkbox" value="true" />
+    Microwave
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_11__Id" name="AmenitiesCheckList[11].Id" type="hidden" value="12" />
+</div>
+
+<div class="grd-4">
+    <input data-val="true" data-val-required="The IsSelected field is required." id="AmenitiesCheckList_12__IsSelected" name="AmenitiesCheckList[12].IsSelected" type="checkbox" value="true" />
+    Internet Incl
+    <input data-val="true" data-val-required="The Id field is required." id="AmenitiesCheckList_12__Id" name="AmenitiesCheckList[12].Id" type="hidden" value="17" />
+</div>
+
+            </div>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+         <button type="button" class="btn btn-listing-a hide-roommate-btn" id="btn-roommate-search" onclick="setRoommateWanted()">Roommates Wanted</button>
+        <div class="clearfix">&nbsp;</div>
+        <button class="btn btn-listing-c" id="btn-main-search-more">More Options</button>
+        <button class="btn btn-listing-c" id="btn-main-search-less">Less Options</button>
+        <div>
+            <p>Please be advised that Western University does not endorse, approve, or confirm the accuracy of the content posted on this website.
+            <a data-popup-open="popup-2" href="#" style="text-decoration: underline">Read the full Prospective Tenants Notice.</a></p>
+        </div>
+        <button type="submit" class="btn btn-listing-a" id="btn-main-search">Search</button>
+        <div class="clearfix">&nbsp;</div>
+    </div>
+<input name="Desc" type="hidden" value="false" /><input name="AmenitiesCheckList[0].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[1].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[2].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[3].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[4].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[5].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[6].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[7].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[8].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[9].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[10].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[11].IsSelected" type="hidden" value="false" /><input name="AmenitiesCheckList[12].IsSelected" type="hidden" value="false" /></form>
+
+<div class="popup" data-popup="popup-1" style="display: none;">
+    <div class="popup-inner">
+        <p style="text-align: center;"><img src="https://offcampus.uwo.ca/images/map_designated.gif" alt="Map of London's Designated Areas"></p>
+        <p><a class="btn btn-listing-a" data-popup-close="popup-1" href="#">Close</a></p>
+        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+    </div>
+</div>
+<div class="popup" data-popup="popup-2" style="display: none;">
+    <div class="popup-inner">
+        <p>
+            <h3 style="text-decoration: underline">Prospective Tenants Notice:</h3>
+            
+            <p>Please be advised that Western University does not endorse, approve, or confirm the accuracy of any  content posted by a landlord or property manager on this listing website, including whether a Landlord has obtained any required Rental Unit License with the City of London. Landlords and property managers are solely responsible for the accuracy of their posted content. However, if a concern is raised to Western University regarding a post, we will review the matter and act accordingly. This may result in a landlord or a post being removed from the website.  Prior to entering into a rental agreement, we recommend that prospective tenants should:</p>
+            
+            <ul>
+                <li>inspect the rental unit and property in person,</li> 
+                <li>research the neighbourhood and public transportation,</li>
+                <li>ask current tenants about the property, the rental unit, and the landlord.</li> 
+                <li>verify if this landlord has a Rental Unit License with the City of London. In some specified cases, the unit/house may not require an official rental license with the City of London. More information can be found here: <a href="https://london.ca/business-development/business-licences/residential-rental-unit-licences" target="_blank" style="text-decoration: underline">https://london.ca/business-development/business-licences/residential-rental-unit-licences</a></li>
+                <li>visit the Frequently Asked Questions Pages on our website, and/or on the Landlord and Tenant Board website. You'll find information on roommate, garbage, noise, safety, rent, pets and smoking, landlord/tenant' relationship, etc.</li>
+            </ul>
+        </p>
+        <p><a class="btn btn-listing-a" data-popup-close="popup-2" href="#">Close</a></p>
+        <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+    </div>
+            
+</div>
+<br />
+
+
+
+<input id="JSONFeaturedAds" hidden value="[{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:58523,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/58523-1.jpg&quot;,&quot;Address&quot;:&quot;70 Chapman Court&quot;,&quot;Rent&quot;:650,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:2,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:51438,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/51438-1.jpg&quot;,&quot;Address&quot;:&quot;307 Fanshawe Park Rd E&quot;,&quot;Rent&quot;:880,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:3,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:49026,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/49026-1.jpg&quot;,&quot;Address&quot;:&quot;Tanoak Dr&quot;,&quot;Rent&quot;:3000,&quot;RentPerBdrm&quot;:false,&quot;BedroomsVacant&quot;:4,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:39368,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/39368-1.jpg&quot;,&quot;Address&quot;:&quot;Lawson Rd&quot;,&quot;Rent&quot;:850,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:36722,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/36722-1.jpg&quot;,&quot;Address&quot;:&quot;13 Blackfriars&quot;,&quot;Rent&quot;:825,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:4,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:58884,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/58884-1.jpg&quot;,&quot;Address&quot;:&quot;252 Cheapside Street&quot;,&quot;Rent&quot;:1100,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:5,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:51436,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/51436-1.jpg&quot;,&quot;Address&quot;:&quot;307 Fanshawe Park Rd E&quot;,&quot;Rent&quot;:1225,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:2,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:53785,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/53785-1.jpg&quot;,&quot;Address&quot;:&quot;201 Edinburgh St&quot;,&quot;Rent&quot;:895,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:4,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:44784,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/44784-1.jpg&quot;,&quot;Address&quot;:&quot;1092 Richmond St.&quot;,&quot;Rent&quot;:745,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:55637,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/55637-3.jpg&quot;,&quot;Address&quot;:&quot;1600 Adelaide Street North&quot;,&quot;Rent&quot;:800,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:57837,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/57837-1.jpg&quot;,&quot;Address&quot;:&quot;1209 Richmond Street&quot;,&quot;Rent&quot;:2250,&quot;RentPerBdrm&quot;:false,&quot;BedroomsVacant&quot;:2,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:57836,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/57836-1.jpg&quot;,&quot;Address&quot;:&quot;1209 Richmond Street&quot;,&quot;Rent&quot;:2595,&quot;RentPerBdrm&quot;:false,&quot;BedroomsVacant&quot;:3,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:40646,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/40646-1.jpg&quot;,&quot;Address&quot;:&quot;406 Castlegrove Blvd.&quot;,&quot;Rent&quot;:850,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:49023,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/49023-1.jpg&quot;,&quot;Address&quot;:&quot;13 Blackfriars St&quot;,&quot;Rent&quot;:750,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:2684,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/Lyttle - 162 Victoria-2.jpg&quot;,&quot;Address&quot;:&quot;162 VICTORIA ST&quot;,&quot;Rent&quot;:0,&quot;RentPerBdrm&quot;:false,&quot;BedroomsVacant&quot;:4,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:49717,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/49717-5.jpg&quot;,&quot;Address&quot;:&quot;1600 Adelaide Street North&quot;,&quot;Rent&quot;:1200,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:49005,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/49005-3.jpg&quot;,&quot;Address&quot;:&quot;17 Yale St&quot;,&quot;Rent&quot;:825,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:3,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:47114,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/47114-1.jpg&quot;,&quot;Address&quot;:&quot;1570 Richmond Street&quot;,&quot;Rent&quot;:899,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:5,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:58083,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/58083-1.jpg&quot;,&quot;Address&quot;:&quot;544 Windermere Road&quot;,&quot;Rent&quot;:1350,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:33173,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/33173-1.jpg&quot;,&quot;Address&quot;:&quot;468 Castlegrove Blvd&quot;,&quot;Rent&quot;:695,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:1,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;Sarnia and Castlegrove&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:58182,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/58182-2.jpg&quot;,&quot;Address&quot;:&quot;176 Cambridge St&quot;,&quot;Rent&quot;:3000,&quot;RentPerBdrm&quot;:false,&quot;BedroomsVacant&quot;:5,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:45989,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/45989-1.jpg&quot;,&quot;Address&quot;:&quot;1570 Richmond Street&quot;,&quot;Rent&quot;:899,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:5,&quot;AmenitiesIncl&quot;:false,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:54008,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/54008-5.jpg&quot;,&quot;Address&quot;:&quot;14 Masonvile Crescent&quot;,&quot;Rent&quot;:1050,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:3,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:false,&quot;Intersection&quot;:&quot;Richmond st &amp;Sunnyside dr&quot;},{&quot;ImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/&quot;,&quot;NoImgPath&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/no_image_available.jpg&quot;,&quot;RentunitId&quot;:58688,&quot;PrimaryImage&quot;:&quot;https://offcampus.uwo.ca/assets/listing_images/58688-1.jpg&quot;,&quot;Address&quot;:&quot;1038 Patricia Street&quot;,&quot;Rent&quot;:795,&quot;RentPerBdrm&quot;:true,&quot;BedroomsVacant&quot;:4,&quot;AmenitiesIncl&quot;:true,&quot;OkToListAddress&quot;:true,&quot;Intersection&quot;:&quot;&quot;}]" />
+<fieldset class="featured_ads_section">
+    <legend>Top Ads</legend>
+
+    <div class="featured_ads">
+            <div>
+                <div class="image_galleryM"></div>
+            </div>
+            <div class="admin_items">
+                <span class="currentOutOf"></span>
+                <button type="submit" class="btn btn-listing-a featured_btn" id="see_all_featured" onclick="setIsFeatured()">See All Top Ads</button>
+            </div>
+    </div>
+</fieldset>
+
+
+
+<div class="active_listings">
+    
+
+<input type="hidden" class="total_listings" value="1128"/>
+<input type="hidden" class="total_pages" value="23"/>
+<input type="hidden" class="current_page" value="0"/>
+
+<div id="sub-search">
+    <img src="/Listings/img/ajax-loader.gif" class="search_loading" />
+    <p><span class="item_count"></span> as of May 04, 2025</p>
+    <div>
+        <span>Sort By</span>
+        <button class="btn btn-listing-b btn_price_sort" onclick="sort_by_price_desc()">
+            Price
+            <span class="list_sort price_sort_arrow"></span>
+        </button>
+        <button class="btn btn-listing-b btn_distance_sort" onclick="sort_by_distance_desc()">
+            Distance
+            <span class="list_sort distance_sort_arrow"></span>
+        </button>
+        <button class="btn btn-listing-b btn_location_sort" onclick="sort_by_location_desc()">
+            Location
+            <span class="list_sort location_sort_arrow"></span>
+        </button>
+    </div>
+</div>
+<div class="clearfix">&nbsp;</div>
+
+<div class="rental-listing">&nbsp;</div>
+
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58728-1.jpg);" href="/Listings/Details/58728">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/58728">1235 Richmond Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1325  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Aston Suite at Luxe London&#xD;&#xA;I am looking for a female student in western university for an appartment lease take over from April 27th 2025-April 26th, 2026 in Aston Suite at Luxe London, It is a 2 bedroom (Attached washroom) and 1 Kitchen and living room. &#xD;&#xA;If you want to renew the lease next year it is possible according to your choice. It is a clean well maintained appartment. Please find below link for a preview.  &#xD;&#xA;https://www.youtube.com/watch?v=qf3j5sGKjvM&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58728">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58015-1.jpg);" href="/Listings/Details/58015">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/58015">Richmond St N &amp; Windermere</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$825   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    AMAZING LOCATION: STEPS AWAY FROM UNIVERSITY HOSPITAL AND MEDICAL BUILDINGS, Masonville Mall, all shopping, restaurants, and on the bus route to downtown and all University Buildings. &#xD;&#xA;LUXURY LIVING AT ITS BEST in this executive 6th floor Condo Apartment within 5 minutes walking to the UWO Medical Buildings &amp; University Hospital. One of the nicest and most spacious, fully furnished Condo apartment with unobstructed views. &#xD;&#xA;We are ONLY looking for mature students who want to concentrate on their studies. We have Policy of: No Parties, No Smoking and No Pets. The room is for one person only. &#xD;&#xA;Kindly please reply by email and include the following: How long do you need the room for? When do you need it? Please tell us about yourself: Which year? Studies? Do you smoke? Did you rent before? Parking needed?&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58015">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/35365-1.jpg);" href="/Listings/Details/35365">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/35365">483 JEFFREYBROOK CLOSE </a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        North London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$800   per bdrm</strong>, 2 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    HOME SWEET HOME...&#xD;&#xA;OFFERING ROOMS FOR 600$/ PRICE FOR SUMMER SUBLET! &#xD;&#xA;OR GREAT PRICE, STARTS SEPT 1!! Two furnished rooms avail in bright, clean, spacious 4 bdrm house. Safe, quiet neighbourhood, with large yard.  On bus route. In house free laundry. In driveway parking. 10 min bike ride to UWO. Close to Masonville Mall. Master bdrm also avail with private bathroom for 900$/&#xD;&#xA;Text Jill now for a viewing 805 637-7424.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/35365">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/51744-1.jpg);" href="/Listings/Details/51744">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/51744">185 North Centre Road</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$2950  &#x2B; </strong>, 3 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Full house is for rent!  3 bedrooms and 2.5 bathrooms condo townhouse is available for a group of 3 students or a family. Quiet, safe and friendly community. Located within 5 mins walking distance to Loblaws. Minutes away from UWO, bus stops, grocery store and Masonville mall. The master bedroom with ensuite bathroom and walk-in closet. Rent is $2950 plus utilities. &#xD;&#xA;- Convenient location: easy access to everywhere, no car is needed &#xD;&#xA;- Door lock for each bedroom &#xD;&#xA;- Digital pad lock front door&#xD;&#xA;- No carpet&#xD;&#xA;- Furnished room: bed, beddings, side table, desk, chair and lamp etc.&#xD;&#xA;- Two fridges plus one freezer are provided for extra food storage space&#xD;&#xA;- No snow removal or grass cutting required&#xD;&#xA;- Washer and dryer available on the same floor &#xD;&#xA;- Free parking&#xD;&#xA;&#xD;&#xA;12 months term contract starting on May 1, 2025. If you are interested, please feel free to contact me. &#xD;&#xA;&#xD;&#xA;CONTACT INFO: Email jinxin_tj@hotmail.com or Cell (416)824-6196. 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/51744">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/52853-1.jpg);" href="/Listings/Details/52853">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/52853">940 Reeves Avenue</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Whitehills
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1050   per bdrm</strong>, 4 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    4 rooms available in an Executive detached house.&#xD;&#xA;&#xD;&#xA;Come in as a group of two, three or four and get a discounted rate!&#xD;&#xA;&#xD;&#xA;CURRENTLY OCCUPIED BY UWO FEMALE STUDENTS.&#xD;&#xA;AVAILABLE  FROM SEPT. 01, 2025- AUG. 31, 2026.&#xD;&#xA;&#xD;&#xA;Open to UWO/Fanshawe students or young professionals. &#xD;&#xA;&#xD;&#xA;ALL FEMALE-ONLY RESIDENTS/NON-SMOKING/PET-FREE.&#xD;&#xA;&#xD;&#xA;Two bedrooms available on the upper level .&#xD;&#xA;&#xD;&#xA; Two bedrooms available in a legal, spacious and a modern basement of a gorgeous detached house&#xD;&#xA;&#xD;&#xA;Hurry before they are all gone.&#xD;&#xA; MASTER BEDROOM ALREADY OCCUPIED BY A FEMALE UWO STUDENT.&#xD;&#xA; &#xD;&#xA;Two spacious rooms avaiable on the upper level of an open- concept modern house. $1050 only a month.&#xD;&#xA;Shared full bathroom between two tenants only.&#xD;&#xA;&#xD;&#xA;Two bedrooms in a modern legal basement ( large open space &amp; big windows for just $1050 a month ). &#xD;&#xA;Basement also has a reading / entertainment area outside of the rooms.&#xD;&#xA;Well lit with lots of pot lights.&#xD;&#xA;Shared full bathroom between two tenants only in the legal basement.&#xD;&#xA;&#xD;&#xA;Another washroom on the main level is accessible to all tenants.&#xD;&#xA;&#xD;&#xA;Common area to be shared by all tenants and includes access to all amenities on the open-concept main floor. Incredible kitchen overlooking a large open-concept living room with a comfy huge sofa set. Study alongside like-minded studious UWO students and achieve academic excellence. &#xD;&#xA;&#xD;&#xA;An executive open-concept and a spacious house in a quiet neighborhood....... this is a home away from home!&#xD;&#xA;&#xD;&#xA;Modern house (to be shared between 5 female tenants only) that includes all utilities, high-speed internet, wifi, parking, shared full bathroom, and on-site laundry.  Snow removal and lawn care are already contracted out.&#xD;&#xA; &#xD;&#xA;The location is ideal for UWO students and young professionals, in a safe, quiet neighborhood. Walking distance and on a direct bus route to the UWO campus. Close to grocery stores, banks and downtown.&#xD;&#xA;&#xD;&#xA;Females only, please! No smoking. No pets .&#xD;&#xA;&#xD;&#xA;Looking for quiet/studious/clean freak female students and young female professionals.&#xD;&#xA;&#xD;&#xA;Please do not hesitate to reach out for more info. &#xD;&#xA;&#xD;&#xA;$1050 only.....TEXT now to arrange a viewing.. it is worth every penny. &#xD;&#xA;&#xD;&#xA;Why pay $750 -$850 and live in a congested tiny house, confined to your room, when you can live and study like a princess in an executive, spacious house for an extra few hundred dollars!!!&#xD;&#xA;&#xD;&#xA;YOU CAN BE A STUDENT.... AND STILL LIVE LIKE A PRINCESS .&#xD;&#xA;&#xD;&#xA;Just one bus from Aldersbrrok Rd. and Lawson Rd. junction takes you straight to the UWO campus.&#xD;&#xA;&#xD;&#xA;PLEASE CONTACT THROUGH EMAIL or TEXT &gt; 647-402-2529.&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/52853">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58659-1.jpg);" href="/Listings/Details/58659">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/58659">345 Sarnia Road</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near West
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$900  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available July 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    1 Bedroom available for rent in a 5 Bedroom, 3 Bathroom House &#x2013; Close to Western University. I am looking for 1 individual who is interested in occupying the remaining room in this shared living space.&#xD;&#xA;&#xD;&#xA;Spacious 5-bedroom, 3-bathroom house available for rent. Conveniently located near Brescia, Ivey, and the Engineering buildings at Western University. Bus stops are located right nearby for easy access to campus and the city.&#xD;&#xA;&#xD;&#xA;Includes internet and utilities.&#xD;&#xA;&#xD;&#xA;The house includes well-sized bedrooms and useful amenities, including a sauna. Ideal for students or a group looking for a clean, comfortable space near campus.&#xD;&#xA;&#xD;&#xA;$900/month.&#xD;&#xA;&#xD;&#xA;Feel free to reach out for more information: 647-328-7047.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58659">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58807-1.jpg);" href="/Listings/Details/58807">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/58807">915 Richmond</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$750   </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    GRAD STUDENTS!!! APARTMENT TO SHARE with other grad students!!  - 1 Bedroom available in a 4 Bedroom Unit! May 1, 2025 to April 30, 2026 rent is $750 per mth utilities included.&#xD;&#xA;&#xD;&#xA;The unit itself has 4 bedrooms, 2 bathrooms, laundry and a large living space and kitchen. 2 parking spaces available for tenant parking only (please ask for details)&#xD;&#xA;&#xD;&#xA;Please text or email Tina at 519-854-8462 or tina@mcivergroup.com
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58807">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59040-1.jpg);" href="/Listings/Details/59040">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59040">915 Richmond</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$700   </strong>, 4 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    SUMMER SUBLETS - 1 Bedrooms available&#xD;&#xA;$700 per month utilities included.&#xD;&#xA;Parking available.&#xD;&#xA;&#xD;&#xA;Please contact Tina 519-854-8462 or tina@mcivergroup.com
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59040">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58431-1.jpg);" href="/Listings/Details/58431">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/58431">Paul St &amp; Wharncliffe Rd</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1195   per bdrm</strong>, 6 Bedroom(s) Vacant</h3>
+            <h4>Available July 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Wharncliffe &amp; Oxford&#xD;&#xA;$1,195.00 per room&#xD;&#xA;6 bed&#xD;&#xA;6.5 baths&#xD;&#xA;July 1st 2025 to April 30 2026&#xD;&#xA;&#xD;&#xA;Luxury Student Rental &#x2013; Coming Soon!&#xD;&#xA;&#xD;&#xA;Secure your spot in this stunning 6-bed, 6.5-bath property located in a highly sought after area! Under construction and set to be completed soon, this unique home offers each bedroom with a private ensuite, ensuring maximum comfort and independence. A convenient 2-piece guest bathroom rounds out this exceptional layout.&#xD;&#xA;&#xD;&#xA;You&#x2019;ll be among the very first tenants to enjoy this brand-new property, reimagined with modern finishes from top to bottom.&#xD;&#xA;&#xD;&#xA;Included Furnishings:&#xD;&#xA;&#x2022; Living room couches&#xD;&#xA;&#x2022; Coffee and end tables&#xD;&#xA;&#x2022; Wall-mounted smart TV&#xD;&#xA;&#x2022; Dining room set&#xD;&#xA;&#xD;&#xA;Prime Location:&#xD;&#xA;Situated close to campus, downtown, and all the essential amenities. Enjoy a peaceful, upscale student community with excellent access to everything you need.&#xD;&#xA;Plus snow removal &#xD;&#xA;This property is designed with luxury in mind!&#xD;&#xA;&#xD;&#xA;Call or Text Matt at 519-520-9733 for more information!&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58431">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58377-4.jpg);" href="/Listings/Details/58377">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/58377">Wharncliffe Rd &amp; Oxford St </a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$995   per bdrm</strong>, 5 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Luxury 5-Bed, 5.5-Bath Student Rental in Blackfriars &#x2013; One Month Free&#xD;&#xA; &#xD;&#xA;Now leasing for the upcoming term, this fully renovated 5-bedroom, 5.5-bath student home offers modern living, unbeatable convenience, and premium amenities in the highly sought-after Blackfriars neighborhood. Just minutes from downtown, shopping, and direct routes to campus, this property is perfect for students looking for both comfort and accessibility.&#xD;&#xA; &#xD;&#xA;Property Features:&#xD;&#xA;&#x2022; Private ensuite bathrooms in every bedroom&#xD;&#xA;&#x2022; Fully furnished with couches, living room tables, dining set, and a wall-mounted TV&#xD;&#xA;&#x2022; Spacious kitchen with two fridges, stove, built-in microwave, and dishwasher&#xD;&#xA;&#x2022; Private backyard for relaxing or studying outdoors&#xD;&#xA;&#x2022; Four-car parking, a rare find for student rentals&#xD;&#xA; &#xD;&#xA;Limited-Time Offer:&#xD;&#xA;$995 per month, plus one month free&#xD;&#xA; &#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58377">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58430-1.jpg);" href="/Listings/Details/58430">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/58430">Blackfriars  &amp; Wharncliffe Rd</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1295   per bdrm</strong>, 6 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    September 1 start date&#xD;&#xA;&#xD;&#xA;Brand New High-End Student Rental 6 Bed, 6.5 Bath in Blackfriars&#xD;&#xA;&#xD;&#xA;Be the first to live in this one-of-a-kind, newly built home. This brand-new construction is designed with students in mind, offering high-end finishes, spacious living areas, and modern conveniences.&#xD;&#xA;&#xD;&#xA;Move-in Date: September 1, 2025&#xD;&#xA;Lease Term: 8 months (Perfect for students)&#xD;&#xA;&#xD;&#xA;Property Features:&#xD;&#xA;- Six Spacious Bedrooms, Four with private ensuites&#xD;&#xA;- Five and a Half Bathrooms.  Includes a large, shared bathroom with a double vanity and a two-piece guest washroom&#xD;&#xA;- Gourmet Kitchen Featuring two fridges, stove, built-in microwave, dishwasher, large kitchen island, quartz countertops, and under-cabinet lighting&#xD;&#xA;- Fully Furnished Living Space Includes two brand-new couches, a wall-mounted smart TV, coffee and end tables, and a six-person dining set&#xD;&#xA;- Two-Storey Home. No basement bedrooms, but a crawl space for extra storage&#xD;&#xA;- Large Wrap-Around Porch, perfect for relaxing outdoors&#xD;&#xA;- Four Parking Spots, plus easy access to nearby bus routes&#xD;&#xA;- Plus snow removal &#xD;&#xA;&#xD;&#xA;Prime Location in Blackfriars&#xD;&#xA;&#xD;&#xA;Located in a sought-after neighborhood, just minutes from campus, downtown, and major transit routes. This is student living at its finest, modern, comfortable, and brand new.&#xD;&#xA;&#xD;&#xA;For more details or to book showings text Cam today at 226-678-1999 to secure your spot in this exclusive student rental&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58430">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59093-5.jpg);" href="/Listings/Details/59093">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/59093">Oxford St  &amp; Wharncliffe Rd</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near West
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1195   per bdrm</strong>, 5 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    5 Bed, 5.5 Bath Luxury Student Rental &#x2013; Brand New Build&#xD;&#xA;This newly constructed rental offers the perfect blend of space, style, and convenience for students!&#xD;&#xA;Key Features:&#xD;&#xA;&#x2022;&#x9;5 spacious bedrooms, each with its own private ensuite, ensuring privacy and comfort for every resident.&#xD;&#xA;&#x2022;&#x9;Additional 2-piece guest bathroom for added convenience.&#xD;&#xA;&#x2022;&#x9;Modern kitchen with quartz countertops, under-cabinet lighting, a large island, and plenty of storage space, ideal for cooking and entertaining.&#xD;&#xA;&#x2022;&#x9;Open-concept kitchen, living, and dining area, providing a spacious and inviting environment for both study and relaxation.&#xD;&#xA;&#xD;&#xA;Fully Furnished:&#xD;&#xA;&#x2022;&#x9;Large sectional couch&#xD;&#xA;&#x2022;&#x9;Wall-mounted 65&#x201D; smart TV&#xD;&#xA;&#x2022;&#x9;Elegant 6-person dining set&#xD;&#xA;&#x2022;&#x9;Coffee and end tables&#xD;&#xA;&#xD;&#xA;Other Features:&#xD;&#xA;&#x2022;&#x9;4-car parking&#xD;&#xA;&#x2022;&#x9;Private backyard for outdoor gatherings&#xD;&#xA;&#xD;&#xA;This luxurious rental combines comfort and modern amenities, perfect for students. Act fast&#x2014;this won&#x2019;t last long! &#xD;&#xA;Contact us to receive full inventory on student rental properties ranging from 3 bedrooms up to 6! Our rental agents are ready to help you and your group find the perfect living space for your school year &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59093">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59094-2.jpg);" href="/Listings/Details/59094">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/59094">Wharncliffe Rd N &amp; Oxford St W</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1195   per bdrm</strong>, 6 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Luxury Student Rental &#x2013; Brand New &amp; Ready Soon!&#xD;&#xA;This unique 6-bed, 6.5-bath property is under construction and won&#x2019;t last long on the market! Each bedroom will feature a private ensuite, ideal for comfortable, independent living. Plus, a convenient 2-piece guest bathroom will be included.&#xD;&#xA;Expected to be ready soon, this home is being completely reimagined from top to bottom with modern finishes, so you&#x2019;ll be among the first tenants to enjoy everything brand new!&#xD;&#xA;&#xD;&#xA;Included Furnishings:&#xD;&#xA;&#x2022;&#x9;Living room couches&#xD;&#xA;&#x2022;&#x9;Coffee and end tables&#xD;&#xA;&#x2022;&#x9;Wall-mounted smart TV&#xD;&#xA;&#x2022;&#x9;Dining room set&#xD;&#xA;&#xD;&#xA;Perfect Location:&#xD;&#xA;Nestled in an upscale, quiet student neighborhood close to downtown and amenities, offering the ideal balance of tranquility and accessibility.&#xD;&#xA;&#xD;&#xA;Luxury Features:&#xD;&#xA;This property will feature all the latest trends, including quartz countertops, polished tile bathrooms, spacious vanities, and more high-end details throughout.&#xD;&#xA;&#xD;&#xA;Contact now to reserve your spot and for video walkthroughs of comparable properties with similar premium finishes!&#xD;&#xA;&#xD;&#xA;Contact us to receive full inventory on student rental properites ranging from 3 bedrooms up to 6! Our rental agents are ready to help you and your group find the perfect living space for your school year &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59094">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58700-2.jpg);" href="/Listings/Details/58700">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/58700">179 St. James st</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$850  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    *Looking for a Western (or affiliates) Student as a roommate for next year. (May 1st 2025- April 30th 2026)*&#xD;&#xA;&#xD;&#xA;Roommate Wanted: We&#x27;re a group of 3 undergrad guys seeking a 4th roommate for our place at Oxford and Richmond. Rent is $850 per month without utilities. We&#x27;re a mix of social and studious people, who love sports and hanging out together. The apartment features furnished common areas including two kitchens, two bathrooms, laundry facilities, and two dishwashers. If you&#x27;re looking for a convenient and comfortable living arrangement, get in touch!&#xD;&#xA; &#xD;&#xA;Price: $850/ month (not including utilities)&#xD;&#xA;&#xD;&#xA;Location: Oxford and Richmond&#xD;&#xA;- Close to Downtown &#xD;&#xA;- Close to Western (and affiliates) &#xD;&#xA;- Close to Fanshawe &#xD;&#xA;- Access to bus, groceries and bars &#xD;&#xA;&#xD;&#xA;Included: &#xD;&#xA;- Laundry &#xD;&#xA;- Full Kitchen &#xD;&#xA;- Furnished common space&#xD;&#xA;&#xD;&#xA;Contact for more recent pictures and if you are interested.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58700">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/1781-2.jpg);" href="/Listings/Details/1781">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/1781">305 Central Ave </a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Downtown
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1450   </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Best location  by Victoria Park and Richmond Row. Steps to all buses going to Western campus.. Hardwood flooring throughout.On the main floor with private entrance. Spacious living room and bedroom with plenty of closet space. A quiet building of mature students and professionals. Close to grocery stores  and numerous restaurants. Owner pays heat and water. Tenant only pays personal electric.. A no pets, non-smoking building. Laundry facilities onsite.Parking for one included. Call JOHN at 519-645-6036- NO TEXT MESSAGES please. Have another in the same building at $1350.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/1781">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/50082-1.jpg);" href="/Listings/Details/50082">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/50082">7 Ranchwood Cres</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Whitehills
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$2800  &#x2B; </strong>, 4 Bedroom(s) Vacant</h3>
+            <h4>Available May 5, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    A beautiful, furnished home with living room dinning room, kitchen in a convenient neighbourhood walking distance from Sherwood Forest mall, transit etc. There is a gorgeous backyard for you to enjoy in the summer months&#xD;&#xA;&#xD;&#xA;$2800&#x2B; utilities, for whole house with basement apartment and storage area Garage garage door opener with 4 car parking space&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/50082">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/53246-1.jpg);" href="/Listings/Details/53246">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/53246">585 Piccadilly Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Downtown
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1350   </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    **Perfect for quiet and mature, study oriented student**&#xD;&#xA;&#xD;&#xA;Cute 1 bedroom personal private apartment unit (not shared)!&#xD;&#xA;Ready for November 1st move in.  Located downtown in a quiet heritage neighbourhood. This is a study oriented building, with bus routes straight to the university just steps away. All utilities included, wifi included, and parking. Private entrance and a personal private patio out back. &#xD;&#xA;&#xD;&#xA;**Single occupancy only** as per fire code regulations. No pets.&#xD;&#xA;&#xD;&#xA;If you are interested, please confirm you are a uwo student with what year you are in, and that you can fulfill minimum one year lease.&#xD;&#xA;&#xD;&#xA;Thanks.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/53246">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/40959-1.jpg);" href="/Listings/Details/40959">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/40959">141 Sydenham st</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Downtown
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$850   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    LARGE MASTER BEDROOM available in this all female student house off quiet street located 1.2 km from the gates of Western University. Grocery store, bank, restaurants and bus routes 1 block away. &#xD;&#xA;House is well maintained and includes all utilities, laundry, unlimited high speed internet and monthly house keeping. &#xD;&#xA;Please reply or contact Rheanna @ 519-649-8120 for further information or &#xD;&#xA;to view bedroom/house. 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/40959">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/52185-1.jpg);" href="/Listings/Details/52185">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/52185">753 Elizabeth St</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        East London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$825   per bdrm</strong>, 5 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Clean 5 Bedroom, 2 Bathroom student house for rent. Looking for a group of 5 Students. 825/month each inclusive, 12 month lease required.  Hydro/ water/ gas/  all included in price!  New kitchen, stainless appliances, washer and dryer, great back yard and deck! Close to all&#xD;&#xA;Amenities and steps from bus stop. Please email Tyler at tycostello@hotmail.com or text 519-933-1888 to book a showing. 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/52185">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58833-1.jpg);" href="/Listings/Details/58833">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/58833">134 Mount Pleasant Ave.</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Downtown
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1490  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available June 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    For Rent: Newly Renovated 1-Bedroom Apartment - $1,490 &#x2B; Utilities&#xD;&#xA;&#xD;&#xA;Looking for the perfect place to call home? This newly renovated 1-bedroom apartment is ideal for a single tenant seeking modern comfort and convenience.&#xD;&#xA;&#xD;&#xA;Features:&#xD;&#xA;&#xD;&#xA;Brand-new appliances (fridge, stove, dishwasher)&#xD;&#xA;&#xD;&#xA;In-suite washer &amp; dryer&#xD;&#xA;&#xD;&#xA;Freshly updated interior&#xD;&#xA;&#xD;&#xA;One dedicated parking spot&#xD;&#xA;&#xD;&#xA;Close to downtown, easy access to shops, restaurants, and transit&#xD;&#xA;&#xD;&#xA;Rent: $1,490/month &#x2B; utilities&#xD;&#xA;&#xD;&#xA;Location: Conveniently situated near downtown &#xD;&#xA;&#xD;&#xA;Available June 1st, 2025! Serious inquiries only. Contact us to schedule a viewing!
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58833">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59030-1.jpg);" href="/Listings/Details/59030">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59030">670 Oxford St E </a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        East London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$995  &#x2B; per bdrm</strong>, 3 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    **$1000 SIGNING BONUS in gift cards of your choice to the following restaurants; Delilah&#x27;s, Lucy&#x27;s, Dimi&#x27;s, Burt&#x27;s or Burger Burger. PLUS! Line by-pass all year to Burt&#x27;s and Delilah&#x27;s ** &#xD;&#xA;&#xD;&#xA;WOW, WOW, WOW!!! Executive Student 3 bedroom rental by the room ($995 each). Each room has its own ensuite &amp; WALK-IN CLOSET. Completely renovated top to bottom. &#xD;&#xA;&#xD;&#xA;Upgrades include: &#xD;&#xA;- Soaring ceilings &#xD;&#xA;- Private en-suite&#xD;&#xA;- walk-in closet with each bedroom &#xD;&#xA;- Large tiled fireplace with 65&quot; TV &#xD;&#xA;- High end cabinetry &#xD;&#xA;- Quartz countertops &#xD;&#xA;- Stainless appliances with dishwasher &#xD;&#xA;- High-efficiency laundry in-suite &#xD;&#xA;- High-efficiency heating and air conditioning. &#xD;&#xA;&#xD;&#xA;From flooring, to tile selections, to bathroom and walk-in closet finishes this is one of London&#x27;s finest student rental. This is one you don&#x27;t want to miss! TEXT 519-860-0024 to book a viewing now!
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59030">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59031-6.jpg);" href="/Listings/Details/59031">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59031">1169 Richmond St</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$895  &#x2B; per bdrm</strong>, 5 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    **$1000 SIGNING BONUS** 5 BEDROOM, 2 BATHROOM, NO BASEMENT BEDROOMS! Available September 1st.*** &#xD;&#xA;&#xD;&#xA;Looking to rent to a group of 5 students for $895 each. This 2 storey home is located on the corner of Richmond and Tower Lane so is only a short walk to Main campus and King&#x27;s College. Also close to both Masonville Mall and Richmond Row. &#xD;&#xA;&#xD;&#xA;The house includes: Brand NEW bathroom! Dishwasher, Laundry, Air conditioning, 5 parking spots, Freshly painted and cleaned prior to move in. &#xD;&#xA;&#xD;&#xA;**$1000 SIGNING BONUS in gift cards of your choice to the following restaurants; Delilah&#x27;s, Lucy&#x27;s, Dimi&#x27;s, Burt&#x27;s or Burger Burger. PLUS! Line by-pass all year to Burt&#x27;s and Delilah&#x27;s ** &#xD;&#xA;&#xD;&#xA;Please text Victor, 519-860-0024, for more information or to arrange a viewing. Guarantors and credit checks are required.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59031">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/50624-6.jpg);" href="/Listings/Details/50624">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/50624">Central Ave&amp;Waterloo St</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Downtown
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1295  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available July 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Great for Working Professional, Grad student or Staff: &#xD;&#xA;Apartment 1 block from Victoria Park; &#xD;&#xA;Large family room (16&#x27;x16); &#xD;&#xA;Kitchen with fridge and stove; &#xD;&#xA;4 piece bathroom with exposed brick; &#xD;&#xA;Bedroom (12&#x27;x9) with closet; &#xD;&#xA;Large windows; &#xD;&#xA;No carpet; &#xD;&#xA;Private laundry; &#xD;&#xA;Separate entrance; &#xD;&#xA;Unit located on 2nd floor; &#xD;&#xA;No pets; &#xD;&#xA;1 year lease (first and last required); &#xD;&#xA;Parking available for a small car; &#xD;&#xA;$1295.00/month plus personal hydro; &#xD;&#xA;Unit available for July 1/25; &#xD;&#xA;Text/Phone: 519-697-9301
+                </p>
+            </div>
+
+            <a href="/Listings/Details/50624">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59170-1.jpg);" href="/Listings/Details/59170">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59170">130 Sherwood Forest Square</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Whitehills
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1145   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available May 12, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59170">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59169-1.jpg);" href="/Listings/Details/59169">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59169">974 colborne street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$750   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Hi everyone, &#xD;&#xA;We are currently looking for a 5th roommate to fill our house. We are 4 girls going into 3rd year and are looking for a roommate who is always down for fun but will also prioritize their schooling. The rent is 750$ a month with utilities included. We live in a great neighbourhood in Old North and it&#x2019;s a quick 5 minute bus ride to campus.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59169">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59167-1.jpg);" href="/Listings/Details/59167">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59167">130 sherwood forest square</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Whitehills
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$900   </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    &#x2019;m subletting my room from May 1st to August 30th. The room comes with a private bathroom and free Wi-Fi. The apartment includes shared access to a microwave, toaster, and blender. While the apartment is shared with roommates, you will have your own private room with a bed and a desk.&#xD;&#xA;&#xD;&#xA;There are also amenities in the main office, including a gym, lounges, and outdoor benches.&#xD;&#xA;&#xD;&#xA;If you&#x2019;re interested, please contact me and we can go over the subletting details.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59167">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/33173-1.jpg);" href="/Listings/Details/33173">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/33173">468 Castlegrove Blvd</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near West
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$695  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    1 Large bedroom available in a 3 bedroom house. 2 other students are male Master of Computer Science and 4th year Computer Engineering. Close to campus and $10 uber to downtown. All bedrooms above ground with large windows. 10 minute walk to campus. Located on #9 and #10 Bus routes. Fully furnished beautiful living room with furniture included! Large kitchen.  Newly renovated, new appliances. Room can be furnished upon request. Walking distance to campus, grocery store, LCBO, Costco and more. Great backyard! Laundry included All for $695 per room per month, great value! Flexible start date! Available May 1/2025. Call or text Pat: 519-870-9941 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/33173">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/44784-1.jpg);" href="/Listings/Details/44784">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/44784">1092 Richmond St.</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$745  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Come take advantage!  Individual rooms available for rent in a female tenanted house. Prices have been dropped so take advantage of huge savings! Amazing location, steps to Richmond gates! All LARGE rooms on first or second floor, with closets, multiple windows in each.  3 bathrooms, large beautiful living room and study area. Beautiful backyard, garage available for use. Parking for 8. Perfect for cool and mature students! Full kitchen, full laundry &#x2B; great sized living room. $745/room. Text/call for fastest response!Pat 519 870-9941&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/44784">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59168-1.jpg);" href="/Listings/Details/59168">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59168">770 Cheapside Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        East London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$750   </strong>, 6 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Hello &#xD;&#xA;Starting September 1, 2025 on a one year lease is a fully furnished house located between Western and Fanshawe main campus on Cheapside. &#xD;&#xA;&#xD;&#xA;Looking for quiet, mature, clean, students to fill home. &#xD;&#xA;&#xD;&#xA;Home has 6 rooms and range in price between 750-975&#xD;&#xA;Rooms are furnished with a double bed, dresser, desk and have a closet. &#xD;&#xA;1 main bedroom with private bathroom &#xD;&#xA;2 rooms on upper &#xD;&#xA;1 main floor room &#xD;&#xA;2 basement rooms (share 1 full bathroom) &#xD;&#xA;&#xD;&#xA;Utilities, internet and lawncare included in rent price. &#xD;&#xA;Please reach out for further details. Viewing available on Sunday May 2nd, 2025. &#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59168">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59165-1.jpg);" href="/Listings/Details/59165">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59165">5-505 Proudfoot Lane</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        West London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$715  &#x2B; </strong>, 2 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    1 or 2 bedrooms available in townhouse condo.&#xD;&#xA;Currently looking for 1 or 2 roommates for current tenants.&#xD;&#xA;recently renovated condo.&#xD;&#xA;Available September 2025 to May 2025 (8 mo)&#xD;&#xA;Prefer email correspondence&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59165">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59164-1.jpg);" href="/Listings/Details/59164">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59164">5-505 Proudfoot Lane</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        West London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$715  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Hello.&#xD;&#xA;We currently have a vacant room available for rent from Sept 2025 - May 2025.  Unit is 3 bedroom condo located near Cherry hill area.&#xD;&#xA;Very nice, updated condo.&#xD;&#xA;Current tenants are returning for next academic year and looking for a roommate to fill our the lease.&#xD;&#xA;Close to bus route and amenities. 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59164">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59163-1.jpg);" href="/Listings/Details/59163">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59163">372 Cedar Avenue</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$900  &#x2B; per bdrm</strong>, 2 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Beautiful single-family home, professionally converted to a triplex. The upstairs unit has 2 bedrooms, 1 bathroom, a full kitchen and a large porch. The walking distance to Western Campus is 1.9 km. Located at Western Road and Cedar Ave. Secured locked back doors. http://westernpines.ca 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59163">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59162-1.jpg);" href="/Listings/Details/59162">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59162">105 Cherryhill blv,</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        West London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1560  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    This apartment is the correct choice to live in, quite area and building, really good space. This apartment is floor 6 and it has good view, overall it&#x2019;s only 10min from the campus and only 5min from the downtown. &#xD;&#xA;Leasing available till February 28, 2026. And it&#x2019;s able to stay longer. 
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59162">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59160-1.jpg);" href="/Listings/Details/59160">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59160">21 Askin Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1798   </strong>, 2 Bedroom(s) Vacant</h3>
+            <h4>Available July 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    2 bedroom (upper) near Wortley Village, 21 Askin Street $1798.00 inclusive of heat, gas and water. Secure entry, parking and laundry on site: &#xD;&#xA;Available July 1, 2025. Completely refurbished unit; Designer kitchen, updated bathroom, porcelain tiles, laminate flooring, Large rooms, open concept, eat in kitchen. Roomy bedrooms with closets.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59160">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59161-1.jpg);" href="/Listings/Details/59161">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59161">522 Canterbury Rd</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1100  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available June 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59161">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59158-1.jpg);" href="/Listings/Details/59158">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59158">1095 Western Rd.</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1000  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    No need to sign up to a 12 month lease.  This is an 8 month lease, starting September 1.  This is for Bedroom #3 in the floorplan. There will be 2 other male roommates going into 3rd year.  This is a clean apartment in a Redbricks building and is a 5-7 minute walk to campus. Located on a major transit line.  Parking lot on the property. Apartment comes with living room furniture, Use of available mattress optional.  In-suite laundry, dishwasher.  
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59158">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/48498-1.jpg);" href="/Listings/Details/48498">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/48498">274 tamblyn dr</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near West
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$895   per bdrm</strong>, 2 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    text 416 459 1818. Renovated house comes w/ new furnishing &amp; paint, located within a short walk to U of Western &amp; prime student area, with shopping close by.  2 good size bedrooms within self contained apt. on lower level  i.e  separate entrance, completely decked out with new:   kitchen, 55&quot; t.v, furniture, appliances &amp; new bathroom.  Cleaning service every 3rd week. New washer/dryer.  Garage parking is available.  All utilities, h/spd internet,  exterior deck with cedar furniture included.     Looking for responsible students.  &#xD;&#xA;  &#xD;&#xA;Tamblyn is also set-up for International and incoming Post Grad. Students &#xD;&#xA;                                                       &#xD;&#xA;          References needed. Allergy alert - no pets, smoking/vaping
+                </p>
+            </div>
+
+            <a href="/Listings/Details/48498">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/57974-1.jpg);" href="/Listings/Details/57974">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/57974">1035 Richmond Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$750   per bdrm</strong>, 6 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    ALL UTILITIES&#x2B;INTERNET INCLUDED! Cash Rebate award for signing! &#xD;&#xA;Beautiful 6-Bedroom home perfectly located between UWO and downtown!&#xD;&#xA;Two very large dining and sitting areas, plus two full bathrooms. Full driveway makes it easy to park multiple vehicles!&#xD;&#xA;&#xD;&#xA;Come have a look! Text (905) 749-9755 if you are interested to book a showing!&#xD;&#xA;Full groups of 5-6 only please.&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/57974">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/46690-1.jpg);" href="/Listings/Details/46690">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/46690">483 Jeffreybrook Close</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$600   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    BEST DEAL OUT THERE FOR SUMMER SUBLET!!&#xD;&#xA;LOOKING FOR 3 STUDENTS to fill a spacious, 4 bedroom furnished house in safe, quiet neighbourhood. Large, fenced yard!  Two bedrooms are 600$/ and master bedroom and bathroom 700$/&#xD;&#xA;Live in London&#x27;s best school district! On bus route. 10 min bike ride to UWO. Close to Masonville Mall, and grocery stores.&#xD;&#xA;Avail staring May 1st.&#xD;&#xA;Text now 805-637-7424  to book a viewing.&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/46690">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/42301-1.jpg);" href="/Listings/Details/42301">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/42301">Lombardo Avenue&amp;Victoria Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$850   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available August 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    ** August 1st 2025 - end of April 2026 NINE MONTH LEASE (can be extended) - Short 10 min.walk to campus from Victoria Street IDEAL LOCATION  - no need to worry about taking a bus ~ available lease for one clean bright bedroom, large walk in light up closet  -**SAFE and peaceful upscale neighbourhood**.......female UPPER YEAR/Grad/serious undergrad students preferred......All costs included, unlimited internet/all utilities  $850 per month .......Cute clean &#x27;Old North&#x27; cottage very desirable sought after location, set amongst safe, quiet professional neighbourhood. - no extra fees, includes parking, fully furnished -  enjoy walking to Western campus along quiet safe sidewalk lined streets.  away from student party zones- neighbours include UWO professors/professionals.  Many updates including high efficiency furnace, Central air conditioning, newer roof and siding, security lighting.  LICENSED AND INSPECTED by the City of London for a higher assurance of safety.  NO LEAD water pipes - all updated (most Old North rentals contain lead water pipes).  All amenities onsite including full laundry, kitchen appliances, private parking in driveway, large private yard, sun porch.  Near bus line, close to park with jogging/biking trails, easily walk to U.H. and St. Joe&#x27;s teaching hospitals.  *****Renting one LARGE BRIGHT BEDROOM -  Large closet ***** this bedroom can be tastefully furnished at no extra charge.    Renting to FEMALE students -  ideal for a student in a heavier program that appreciates a quieter/respectful living environment - this house is set up for students very focused on their studies i.e. professional programs and graduate programs.  Vacancy this year only as current tenants are finishing programs - the remaining students are in medical/professional/graduate programs.&#xD;&#xA;Please email for more info and to pass along your contact info....more photos  and slide show, viewings upon request
+                </p>
+            </div>
+
+            <a href="/Listings/Details/42301">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/39832-1.jpg);" href="/Listings/Details/39832">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/39832">141 Sydenham St.</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$650   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    1 Bedroom (Furnished or unfurnished) available in this all female house on a quiet street just off Richmond near Oxford.  Less than 2 Km from Western&#x27;s main gates.  Perfect for female students or working professionals. Everything you need is within walking distance: restaurants, bank, grocery and all major bus routes! Many updates including granite counter tops, stainless steel appliances, flat screen tv and security system.  There are 3 full bathrooms with showers in all of them.  Utilities, unlimited high speed internet, heat/air conditioning, onsite laundry and monthly cleaning are included. Please contact Rheanna at 519-649-8120 to view.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/39832">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/53628-2.jpg);" href="/Listings/Details/53628">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/53628">544 Windermere Road</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1350  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    4/5 GTA first year female students looking for a female to complete their home. Looking for 1 female, May 1, *individual lease*, for 1350&#x2B;utilities shares with the group  All bedrooms have ensuite bathrooms, walk in closets, private access bedroom doors, and large windows. This is a brand new purpose built luxury student accommodation. This is new, fully furnished (including bedrooms). Text/Call anytime. More information on the property is available at www.windermereannex.com. If your group wants to book a showing of this property right now, follow this link: https://www.windermereannex.com/book-tour.html
+                </p>
+            </div>
+
+            <a href="/Listings/Details/53628">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/54605-1.jpg);" href="/Listings/Details/54605">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/54605">544 Windermere Road</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1350   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Video: https://youtu.be/HdkXykirx3g .Single bedroom (with ensuite bathroom, walk in closet, furnished with queen bed) available in a female student unit. No parking. Utilitity = Flat Fee ($70/person) but tenants split internet costs. Large bedroom has its own private ensuite bathroom, walk in closet, large, with furniture. This is a new house, every bedroom is furnished (queen bed), with its own ensuite bathroom and walk in closet. This is a May 1 *individual* lease. Female students who have signed on are 2nd/3rd year. Lease direct w/ owner. Feel free to DM to set up a showing More pics/videos etc. are at www.windermereannex.com. Copy/paste link to directly book a tour for this property at https://www.windermereannex.com/book-tour.html
+                </p>
+            </div>
+
+            <a href="/Listings/Details/54605">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/58083-1.jpg);" href="/Listings/Details/58083">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/58083">544 Windermere Road</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1350  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Looking for the ultimate student rental? This newly built, modern home is just a short walk to Western University, located in a prime student neighborhood. Each spacious bedroom features a walk-in closet, a private ensuite bathroom, and comes fully furnished&#x2014;perfect for comfortable and convenient living. The open-concept design includes a fully equipped kitchen and in-suite laundry, making student life effortless. With Masonville Mall, grocery stores, and transit nearby, this home offers the ideal blend of privacy, style, and location. Limited spots available &#x2013; book your showing today! More pictures, videos, 3D Walkthrough and booking a tour online can be found at www.windermereannex.com. Call/Text for more info.&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/58083">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59159-1.jpg);" href="/Listings/Details/59159">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59159">588 Wonderland Road</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        West London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$800  &#x2B; per bdrm</strong>, 3 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Student-Friendly Rental &#x2013; 588 Wonderland Road North &#x2013; 3 Bedrooms Available&#xD;&#xA;&#xD;&#xA;Located just a 12-minute bus ride from Western University&#x2019;s Alumni Hall, this clean and spacious 3-bedroom home is ideal for students or young professionals.&#xD;&#xA;&#xD;&#xA;Available Rooms:&#xD;&#xA;&#xD;&#xA;Bedroom 1: $850/month&#xD;&#xA;Bedroom 2: $800/month&#xD;&#xA;Bedroom 3: $750/month&#xD;&#xA;&#xD;&#xA;We welcome groups of 3 or individual renters&#x2014;each person has their own private bedroom.&#xD;&#xA;&#xD;&#xA;Highlights:&#xD;&#xA;No carpet throughout the home&#x2014;easy to clean and allergy-friendly&#xD;&#xA;Directly on a major bus route with quick access to Western and downtown&#xD;&#xA;Walking distance to the brand-new T&amp;T Supermarket and Sobeys&#xD;&#xA;Shared kitchen, living area, and on-site laundry&#xD;&#xA;Close to restaurants, shopping, and other daily conveniences&#xD;&#xA;&#xD;&#xA;Utilities:&#xD;&#xA;Each tenant pays 1/3 of the utilities (gas, hydro, water), which average around $80/month per person.&#xD;&#xA;&#xD;&#xA;Clean, convenient, and centrally located&#x2014;contact us today to book a viewing!
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59159">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59091-1.jpg);" href="/Listings/Details/59091">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59091">355 Wharncliffe Rd N</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$700  &#x2B; per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available June 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    My roommate and I (5th and 4th year) are looking for one person to join our lease and share the RedBrick unit with us.&#xD;&#xA;&#xD;&#xA;      &#x2022; Located near Oxford &amp; Wharncliffe Intersection.&#xD;&#xA;&#xD;&#xA;     &#x2022; Rent: $700/month (utilities are an additional ~$100/month) &#xD;&#xA;&#xD;&#xA;     &#x2022; June 2025 - April 2026 lease with possibility of extension &#xD;&#xA;&#xD;&#xA;      &#x2022; 2 minute walk to bus stop with 4 buses heading to Western campus&#xD;&#xA;&#xD;&#xA;      &#x2022; Virtual tour available!&#xD;&#xA;&#xD;&#xA;Feel free to reach out if you have any questions or want more info.&#xD;&#xA;
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59091">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59157-5.jpg);" href="/Listings/Details/59157">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/59157">1500 Richmond St</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Masonville
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$1350  &#x2B; </strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available July 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Furnished Master Bedroom with Ensuite Bathroom&#xD;&#xA;Incredibly spacious master bedroom (17.2 sqm) furnished with a queen bed, featuring a private ensuite 5-piece bathroom, large bedroom closet, and walk-in closet for extra storage space.&#xD;&#xA;&#xD;&#xA;The location is perfect for students or professionals needing easy access to University Hospital or Western University (10-minute walk) and a short commute to Victoria Hospital (15-minute drive). The house is located between Masonville and Western University in a quiet and well-maintained neighbourhood complex, with a bus stop right outside and shopping (Masonville Mall, Loblaws, Farm Boy) a 5 minute bus ride away.&#xD;&#xA;&#xD;&#xA;About the Space: &#xD;&#xA;- Master bedroom furnished with queen bed and mattress&#xD;&#xA;- Ensuite 5-piece bathroom (including a fully enclosed bathtub and 2 sinks), bedroom closet, and walk-in closet &#xD;&#xA;- Full kitchen and spacious living room &#xD;&#xA;- 1 parking spot in driveway &#xD;&#xA;&#xD;&#xA;Enjoy the convenience of being close to campus and nearby hospitals in this welcoming, comfortable shared home. Reach out to schedule a viewing or for more information!
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59157">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/56144-1.jpg);" href="/Listings/Details/56144">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/56144">99 Walnut Street</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Near South
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$2095  &#x2B; </strong>, 3 Bedroom(s) Vacant</h3>
+            <h4>Available Immediately</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    3 BEDROOM, 1 BATHROOM &#x2B; DEN WITH PARKING AND IN-UNIT LAUNDRY&#xD;&#xA;_______________________________________________________________&#xD;&#xA;*******Welcome to your perfect academic retreat! goConfirm verified: J5C9****** &#xD;&#xA;_______________________________________________________________&#xD;&#xA;This recently renovated 3 bedroom, 1 bathroom plus den apartment offers a blend of comfort and style, making it an ideal choice for a group of 3 professional students looking for a place to call home during your studies at Western.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Quiet and Safe Neighbourhood in Prime Location:&#xD;&#xA;Located in a peaceful and secure neighbourhood just off Riverside Drive and Wharncliffe Road, this main floor unit in a brick duplex with separate entrance offers quick and easy access to campus (5 minute drive) and is walking distance to downtown, Wortley Village and Metro grocery store.  It is steps away from a park connected to The Thames Valley Parkway. These trails offer opportunities for jogging, cycling, peaceful walks along the river and a scenic route to campus.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Three Bright Bedrooms:&#xD;&#xA;Each room is thoughtfully designed with large windows and ample closet space. Whether you&#x27;re studying or relaxing, you&#x27;ll appreciate the peaceful environment. Each room is filled with natural light during the day and equipped with blackout blinds to ensure you can rest undisturbed anytime you need.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Renovated Kitchen:&#xD;&#xA;This fully renovated kitchen features energy efficient stainless-steel appliances (fridge, range, microwave and dishwasher), generous cupboard storage, and a welcoming atmosphere for cooking and entertaining.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Modern Bathroom:&#xD;&#xA;Enjoy a fresh and modern bathroom with updated fixtures.  This bathroom combines style with functionality and includes a tub.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Versatile Den:&#xD;&#xA;The additional den can be used as a home office, study area, cozy retreat or for extra storage offering flexibility to suit your needs.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Clean and Well-Maintained:&#xD;&#xA;The entire home has been renovated with attention to detail, ensuring a clean and comfortable living space.  Updates include brand-new windows, premium flooring, a new furnace, and a new air conditioner, ensuring year-round comfort and energy efficiency. This apartment has been well-maintained and is in move-in-ready condition.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; In-Unit Laundry: Enjoy the convenience of a new high efficiency washer and dryer right in your apartment.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Parking: 1 parking spot is available.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Public Transit: Close proximity to public transportation and is a 10 minute bus ride to campus.&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;&#x2022; Green Space: Enjoy full access to the backyard, perfect for outdoor gatherings, gardening, or simply relaxing in the fresh air.&#xD;&#xA;&#xD;&#xA;_______________________________________________________________&#xD;&#xA;&#xD;&#xA;***Rent is $2095 &#x2B; heat and hydro (water included). Available: May 1st, 2025***&#xD;&#xA;_______________________________________________________________&#xD;&#xA;We invite you to experience all that this lovely home has to offer. Discover the perfect blend of comfort, convenience, and privacy in this beautifully renovated 3 bedroom, 1 bathroom &#x2B; den apartment.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/56144">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/59156-1.jpg);" href="/Listings/Details/59156">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+            <a href="/Listings/Details/59156">Richmond &amp; Huron</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        Old North
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$775   per bdrm</strong>, 1 Bedroom(s) Vacant</h3>
+            <h4>Available September 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Hi there, &#xD;&#xA;Looking to sublease my room in Old North (St George St), 10 minute walk from campus. The room comes with furniture so you&#x27;ll only need to bring your stuff to personalize it. Bathroom is shared among two other girls. Looking to rent for the full school year (September-April). Send me a message if you&#x27;re interested and I&#x27;ll send photos.
+                </p>
+            </div>
+
+            <a href="/Listings/Details/59156">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="rental-listing">
+        <a class="rental-listing-img" style="background-image: url(https://offcampus.uwo.ca/assets/listing_images/48902-1.jpg);" href="/Listings/Details/48902">&nbsp;</a>
+        <div class="rental-listing-details">
+            <h2><strong>
+        <a href="/Listings/Details/48902">683 Windermere Rd.</a>
+
+    <a data-popup-open="popup-1" href="#" class="location_map_link">
+        North London
+    </a>
+</strong>
+            </h2>
+            <h3><strong>$950   per bdrm</strong>, 4 Bedroom(s) Vacant</h3>
+            <h4>Available July 1, 2025</h4>
+            <div>
+                <img src="/Listings/img/deco_more_text.png" alt="more text..." />
+                <p>
+                    Currently under extensive renovation. New paint, flooring, kitchens and bathrooms! Once completed, this unit will have 3 full washrooms (1 ensuite). Colours and finishes will be modern and light.&#xD;&#xA;&#xD;&#xA;This unit is a 4 bedroom unit. Kitchen includes stainless steel fridge, stove, microwave and range hood. Washer and dryer are included and are not coin operated. Close to all amenities, including LTC. Landscape and winter maintenance is included!
+                </p>
+            </div>
+
+            <a href="/Listings/Details/48902">
+                <button class="btn btn-listing-a">Details</button>
+            </a>
+
+        </div>
+    </div>
+
+<div class="clearfix">&nbsp;</div>
+
+<ul class="pagination">
+
+
+                <li class="current-page">1</li>
+                <li class="page-item"><span onclick="GoToPage(1)">2</span></li>
+                <li class="page-item"><span onclick="GoToPage(2)">3</span></li>
+                <li class="page-item"><span onclick="GoToPage(3)">4</span></li>
+                <li class="page-item"><span onclick="GoToPage(4)">5</span></li>
+                <li class="page-item"><span onclick="GoToPage(5)">6</span></li>
+                <li class="page-item"><span onclick="GoToPage(6)">7</span></li>
+                <li class="page-item"><span onclick="GoToPage(7)">8</span></li>
+                <li class="page-item"><span onclick="GoToPage(8)">9</span></li>
+                <li class="page-item"><span onclick="GoToPage(9)">10</span></li>
+                <li class="page-item"><span onclick="GoToPage(10)">11</span></li>
+                <li class="page-item"><span onclick="GoToPage(11)">12</span></li>
+                <li class="page-item"><span onclick="GoToPage(12)">13</span></li>
+                <li class="page-item"><span onclick="GoToPage(13)">14</span></li>
+                <li class="page-item"><span onclick="GoToPage(14)">15</span></li>
+                <li class="page-item"><span onclick="GoToPage(15)">16</span></li>
+                <li class="page-item"><span onclick="GoToPage(16)">17</span></li>
+                <li class="page-item"><span onclick="GoToPage(17)">18</span></li>
+                <li class="page-item"><span onclick="GoToPage(18)">19</span></li>
+                <li class="page-item"><span onclick="GoToPage(19)">20</span></li>
+                <li class="page-item"><span onclick="GoToPage(20)">21</span></li>
+                <li class="page-item"><span onclick="GoToPage(21)">22</span></li>
+                <li class="page-item"><span onclick="GoToPage(22)">23</span></li>
+
+            <li><span onclick="GoToPage(0 + 1)" aria-label="Previous">&raquo;</span></li>
+
+    </ul>
+
+</div>
+
+        </div>
+    </div>
+
+    <div id="mobile-indicator"></div>
+
+    <div id="footer">
+    <div class="footerbox">
+
+        <div class="footercol-1">
+
+            <a href="//housing.uwo.ca" target="_blank" class="footertitle">Housing.uwo.ca</a><br>
+            <a href="//residence.uwo.ca/" target="_blank" class="footer">Residence at Western</a><br>
+            <a href="//apartments.uwo.ca/" target="_blank" class="footer">University Apartments</a><br>
+            <a href="//plattslane.uwo.ca/" target="_blank" class="footer">Family Accommodations</a><br>
+            <a href="//rezlife.uwo.ca" target="_blank" class="footer">RezLife</a><br>
+            <a href="//residence.uwo.ca/resources/parent_guide/" target="_blank" class="footer">For Parents</a>
+
+        </div>
+
+        <div class="footercol-2">
+
+
+            © 1878 - 2018.
+            <a href="http://www.uwo.ca" target="_blank">Western University</a>.<br>
+            Housing &amp; Ancillary Services
+            <a href="//uwo.ca/" target="_blank">at Western University</a><br>
+            <a href="//has.uwo.ca/websupport/">Web Feedback &amp; Support</a> |
+            <a href="//has.uwo.ca/websupport/disclaimer.cfm">Disclaimer</a> |
+            <a href="//has.uwo.ca/websupport/accessibility.cfm">Accessibility Needs</a>
+
+        </div>
+
+        <div class="footercol-3">
+
+            <div class="footercol-3-logo">
+                <a href="http://www.uwo.ca" target="_blank">
+                    <img src="/Listings/img/crest-stack-3.png" alt="Logo: Western University Canada">
+                </a>
+            </div>
+
+            <div class="footercol-3-links">
+                <a href="//WesternU.ca" target="_blank">WesternU.ca</a><br>
+                <a href="//www.uwo.ca/about/" target="_blank">About Western</a><br>
+                <a href="//www.uwo.ca/future_students/" target="_blank">Admissions</a><br>
+                <a href="//www.uwo.ca/academics/" target="_blank">Academics</a><br>
+                <a href="//www.uwo.ca/research/" target="_blank">Research</a><br>
+                <a href="//www.uwo.ca/campus_life/" target="_blank">Campus Life</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    <div class="clearfix">&nbsp;</div>
+    <script src="/listings/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/listings/lib/jquery/mobile/jquery.mobile.custom.min.js"></script>
+    <script src="/listings/js/multiple-select.js"></script>
+    <script src="/listings/js/Listings.js"></script>
+    <script src="/listings/js/HASCarousel.js"></script>
+    <script src="/listings/js/CarouselMulti.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    
+</body>
+<a hidden href="/Kgk-IM4LEQvAOoRROgUggDjxBRyv588tJanwQh6V8O0=.html">Kgk-IM4LEQvAOoRROgUggDjxBRyv588tJanwQh6V8O0=.html</a></html>
