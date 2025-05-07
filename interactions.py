@@ -51,7 +51,7 @@ for page in range(1, 6):  # Pages 1 to 5
     time.sleep(2)  # Allow page to update
 
     html = driver.page_source
-    with open(f"filtered_page_{page}.html", "w", encoding="utf-8") as f:
+    with open(f"raw_output/filtered_page_{page}.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     print(f"Saved filtered page {page}")
