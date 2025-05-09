@@ -1,4 +1,4 @@
-import utils as utils
+from html.parser import HTMLParser
 
 class AddressParser(HTMLParser):
     def __init__(self):

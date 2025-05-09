@@ -1,14 +1,13 @@
 # THIS FINALLY WORKED OMG FINALLY YES
-# import utils
+# import utils as utils
 import requests
 from html.parser import HTMLParser
 import json
-from address_parser import AddressParser
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
-
+from address_parser import AddressParser
 
 # Set up Chrome (headless optional)
 options = Options()
@@ -21,6 +20,16 @@ driver.get("https://offcampus.uwo.ca/Listings")
 time.sleep(2)  # Wait for page to load
 
 # -------- Apply Filters --------
+# Housing Type options: 1, 2, 6, 7, 13, 11, 12
+target_housing_options = {'1', '6', '7', '11', '13'}  # House, Apartment, Townhouse, etc.
+housing_select = driver.find_element(By.ID, "SelectedHousing")
+housing_options = housing_select.find_elements(By.TAG_NAME, 'option')
+for option in housing_options:
+    if option.get_attribute("value") in target_housing_options:
+        driver.execute_script("arguments[0].selected = true;", option)
+driver.find_element(By.CSS_SELECTOR, "form.search_listings_form").submit()
+time.sleep(3)  # Wait for filtered results to load
+
 # Number of Bedrooms options: 1 through 7
 target_bedroom_options = {'1', '2', '3'}    # 0, 1, 2 bedrooms
 bedroom_select = driver.find_element(By.ID, "NumberOfBedrooms")
