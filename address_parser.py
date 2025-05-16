@@ -13,6 +13,7 @@ class AddressParser(HTMLParser):
         self.in_rent = False
         self.in_availability = False
         self.in_description = False
+        self.items_and_date = False
         self.current = {}
 
     def handle_starttag(self, tag, attrs):
@@ -23,8 +24,17 @@ class AddressParser(HTMLParser):
             self.in_listing = True
             self.current = {}
 
+        # Start a new date object (1 per page)
+        if tag == "div" and attrs.get("id") == "sub-search":
+            self.in_listing = True
+            self.current = {}
+            
         if not self.in_listing:
             return
+        
+        # Start a new items_and_date for that data object
+        if tag == "p" and attrs.get("class") == "item_count":
+            self.items_and_date = True
 
         # Address link
         if tag == "a" and attrs.get("href", "").startswith("/Listings/Details"):
@@ -62,6 +72,7 @@ class AddressParser(HTMLParser):
         self.in_rent = False
         self.in_availability = False
         self.in_description = False
+        self.items_and_date = False
 
     def handle_data(self, data):
         if not self.in_listing:
@@ -71,7 +82,9 @@ class AddressParser(HTMLParser):
         if not data:
             return
 
-        if self.in_address:
+        if self.items_and_date:
+            self.current["items and date"] = data
+        elif self.in_address:
             self.current["address"] = data
         elif self.in_location:
             self.current["location"] = data

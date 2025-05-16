@@ -1,32 +1,50 @@
-import utils
-
-# Save or process pages using your AddressParser
+from interactions import start_driver, get_page_data, next_page
+from address_parser import AddressParser
+import json
 
 url = "https://offcampus.uwo.ca/Listings/"
-# url = "https://offcampus.uwo.ca/Listings/Details/59146/"
 
-response = requests.post(url=url, data={'PageNumber':'2'})
+# get 1st page of the raw data
+page_num = 1
+get_page_data(url, page_num)
 
-# Check if the request was successful
-if response.status_code != 200:
-    raise Exception(f"Failed to retrieve a response from web, may be server issue or incorrect url. Status code: {response.status_code}")
-
-page_content = response.text
-with open("output.html", "w") as f:   # write for debugging
-  f.write(page_content)
-  print('written successfully to output.html')
-
-
-# with open("output.html", "r") as f:
-#     html_content = f.read()
-
+# instead of getting the per page response, we will read the response from the local saved files instead
+page_content = ""
 parser = AddressParser()
+
+# get the first page to extract some info first
+page_num = 1
+with open(f"raw_output/filtered_page_{page_num}.html", "r", encoding="utf-8") as f:
+  page_content = f.read()
+
 parser.feed(page_content)
 
-json_output = json.dumps(parser.listings, indent=4)
+# for page_num in range(1, 3):
+#   # print(page_num)
+#   with open(f"raw_output/filtered_page_{page_num}.html", "r", encoding="utf-8") as f:
+#     page_content = f.read()
 
-with open("cleaned_output.json", "w") as f:
-  f.write(json_output)
+json_output = json.dumps(parser.listings, indent=4)
+print(json_output)
+  
+  # print(page_content)
+# with open("output.html", "w") as f:   # write for debugging
+#   f.write(page_content)
+#   print('written successfully to output.html')
+
+
+# # with open("output.html", "r") as f:
+# #     html_content = f.read()
+
+
+# # parser = AddressParser()
+# parser.feed(page_content)
+
+# json_output = json.dumps(parser.listings, indent=4)
+# print(json_output)
+
+# with open("cleaned_output.json", "w") as f:
+#   f.write(json_output)
 
 # with open("cleaned_output.json", "r") as f: # read for debugging
 #     print(f.read())

@@ -2,7 +2,7 @@
 import requests
 from html.parser import HTMLParser
 import json
-from address_parser import AddressParser
+from date_parser import DateParser
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -23,12 +23,6 @@ def start_driver(url: str = "https://offcampus.uwo.ca/Listings"):
 
 def get_page_data(url: str, page_num: int, posting_date_flag: bool = True, housing_type_flag: bool = True, bedroom_count_flag: bool = True, location_flag: bool = True):
     driver = start_driver()
-
-    if page_num == 1:
-        # Step 3: Locate the parent <div> by ID
-        sub_search = driver.find_element(By.ID, "sub-search")
-        # Step 4: Get the full text inside the parent div
-        full_text = sub_search.text.strip()
 
     # Posting Date: 1
     if posting_date_flag:
@@ -102,3 +96,55 @@ def next_page(driver: webdriver.Chrome, page_number: int):
         print(f"Saved filtered page {page}")
 
     driver.quit()
+
+# -------------------------------------------
+# from utils import import_utils
+from interactions import start_driver, get_page_data, next_page
+from address_parser import AddressParser
+from date_parser import DateParser
+import json
+# import_utils()
+
+url = "https://offcampus.uwo.ca/Listings/"
+# url = "https://offcampus.uwo.ca/Listings/Details/59146/"
+
+# get 1st page of the data
+page_num = 1
+# get_page_data(url, page_num)
+
+# instead of getting the per page response, we will read the response from the local saved files instead
+page_content = ""
+parser = AddressParser()
+# date_parser = DateParser()
+
+
+
+# # get the first page to extract some info first
+# with open(f"raw_output/filtered_page_{page_num}.html", "r", encoding="utf-8") as f:
+#   page_content = f.read()
+
+# date_parser.feed(page_content)
+
+
+# # for page_num in range(1, 3):
+# #   # print(page_num)
+# #   with open(f"raw_output/filtered_page_{page_num}.html", "r", encoding="utf-8") as f:
+# #     page_content = f.read()
+
+# json_output = json.dumps(date_parser.listings, indent=4)
+# print(json_output)
+  
+#   # print(page_content)
+# # with open("output.html", "w") as f:   # write for debugging
+# #   f.write(page_content)
+# #   print('written successfully to output.html')
+
+
+# # # with open("output.html", "r") as f:
+# # #     html_content = f.read()
+
+
+
+# # with open("cleaned_output.json", "r") as f: # read for debugging
+# #     print(f.read())
+
