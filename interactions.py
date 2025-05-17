@@ -1,5 +1,5 @@
-# from utils import import_utils
 import requests
+import re
 from html.parser import HTMLParser
 import json
 from address_parser import AddressParser
@@ -7,14 +7,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
-# import_utils()
 
 def start_driver(url: str = "https://offcampus.uwo.ca/Listings"):
     # Set up Chrome (headless optional)
     options = Options()
     options.add_argument("--headless")  # Remove this if you want to see the browser
     driver = webdriver.Chrome(options=options)
-
+    
     # Go to the listings page
     driver.get(url)
 
@@ -29,6 +28,17 @@ def get_page_data(url: str, page_num: int, posting_date_flag: bool = True, housi
         sub_search = driver.find_element(By.ID, "sub-search")
         # Step 4: Get the full text inside the parent div
         full_text = sub_search.text.strip()
+        print(full_text)
+        lines = full_text.split("\n")
+        if len(lines) > 1:
+            search_summary = lines[0]
+            print("Search Summary:", search_summary)
+        match = re.search(r'(Search results: .*?\)) as of (.+)', search_summary)
+        if match:
+            results_text = match.group(1)
+            date_text = match.group(2)
+            print("Results:", results_text)
+            print("Date:", date_text)
 
     # Posting Date: 1
     if posting_date_flag:
@@ -54,7 +64,7 @@ def get_page_data(url: str, page_num: int, posting_date_flag: bool = True, housi
 
     if bedroom_count_flag:
         # Number of Bedrooms options: 1 through 7
-        target_bedroom_options = {'1', '2', '3'}    # 0, 1, 2 bedrooms
+        target_bedroom_options = {'3'}    # 0, 1, 2 bedrooms
         bedroom_select = driver.find_element(By.ID, "NumberOfBedrooms")
         bedroom_options = bedroom_select.find_elements(By.TAG_NAME, 'option')
         for option in bedroom_options:
@@ -86,6 +96,8 @@ def get_page_data(url: str, page_num: int, posting_date_flag: bool = True, housi
         f.write(html)
     
     print(f"Saved filtered page {page_num}")
+
+    return results_text, date_text
 
 
 # -------- Paginate and Save HTML --------

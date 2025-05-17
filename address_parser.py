@@ -31,7 +31,7 @@ class AddressParser(HTMLParser):
             
         if not self.in_listing:
             return
-        
+    
         # Start a new items_and_date for that data object
         if tag == "p" and attrs.get("class") == "item_count":
             self.items_and_date = True

@@ -1,4 +1,10 @@
-import utils as utils
-import interactions as interactions
-import address_parser as address_parser
-import get_page as get_page
+from interactions import start_driver, get_page_data, next_page
+from address_parser import AddressParser
+import json
+
+def main():
+    url = "https://offcampus.uwo.ca/Listings/"
+
+
+if __name__ == "__main__":
+    main()
