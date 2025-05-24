@@ -8,12 +8,11 @@ class AddressParser(HTMLParser):
 
     def reset_flags(self):
         self.in_listing = False
-        self.in_address = False
-        self.in_location = False
+        self.in_Address = False
+        self.in_Location = False
         self.in_rent = False
         self.in_availability = False
-        self.in_description = False
-        self.items_and_date = False
+        self.in_Description = False
         self.current = {}
 
     def handle_starttag(self, tag, attrs):
@@ -23,30 +22,21 @@ class AddressParser(HTMLParser):
         if tag == "div" and attrs.get("class") == "rental-listing":
             self.in_listing = True
             self.current = {}
-
-        # Start a new date object (1 per page)
-        if tag == "div" and attrs.get("id") == "sub-search":
-            self.in_listing = True
-            self.current = {}
             
         if not self.in_listing:
             return
-    
-        # Start a new items_and_date for that data object
-        if tag == "p" and attrs.get("class") == "item_count":
-            self.items_and_date = True
 
         # Address link
         if tag == "a" and attrs.get("href", "").startswith("/Listings/Details"):
             if "background-image" in attrs.get("style", ""):
-                self.current["image_url"] = attrs["style"].split("url(")[1].split(")")[0]
+                pass
             else:
-                self.in_address = True
-                self.current["listing_url"] = "https://offcampus.uwo.ca" + str(attrs["href"])
+                self.in_Address = True
+                self.current["URL"] = "https://offcampus.uwo.ca" + str(attrs["href"])
 
         # Location
         if tag == "a" and attrs.get("class") == "location_map_link":
-            self.in_location = True
+            self.in_Location = True
 
         # Rent
         if tag == "h3":
@@ -58,7 +48,7 @@ class AddressParser(HTMLParser):
 
         # Description
         if tag == "p":
-            self.in_description = True
+            self.in_Description = True
 
     def handle_endtag(self, tag):
         if tag == "div" and self.in_listing:
@@ -67,12 +57,11 @@ class AddressParser(HTMLParser):
             self.listings.append(self.current)
             self.reset_flags()
 
-        self.in_address = False
-        self.in_location = False
+        self.in_Address = False
+        self.in_Location = False
         self.in_rent = False
         self.in_availability = False
-        self.in_description = False
-        self.items_and_date = False
+        self.in_Description = False
 
     def handle_data(self, data):
         if not self.in_listing:
@@ -82,15 +71,13 @@ class AddressParser(HTMLParser):
         if not data:
             return
 
-        if self.items_and_date:
-            self.current["items and date"] = data
-        elif self.in_address:
-            self.current["address"] = data
-        elif self.in_location:
-            self.current["location"] = data
+        if self.in_Address:
+            self.current["Address"] = data
+        elif self.in_Location:
+            self.current["Location"] = data
         elif self.in_rent:
-            self.current["rent_info"] = data
+            self.current["Price"] = data
         elif self.in_availability:
-            self.current["available"] = data
-        elif self.in_description:
-            self.current["description"] = self.current.get("description", "") + data + " "
+            self.current["Available"] = data
+        elif self.in_Description:
+            self.current["Description"] = self.current.get("Description", "") + data + " "
