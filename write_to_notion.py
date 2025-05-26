@@ -19,38 +19,37 @@ def create_notion_entry(total_pages):
                 notion.pages.create(
                     parent={"database_id": DATABASE_ID},
                     properties={
-                        "URL": {
+                        "ID": {
                             "title": [
                                 {
                                     "text": {
-                                        "content": listing["URL"]
+                                        "content": listing.get("ID", "")
                                     }
                                 }
                             ]
+                        },
+                        "URL": {
+                            "url": listing.get("URL", "")
                         },
                         "Address": {
                             "rich_text": [
                                 {
                                     "text": {
-                                        "content": listing["Address"]
+                                        "content": listing.get("Address", "")
                                     }
                                 }
                             ]
                         },
                         "Location": {
-                            "rich_text": [
-                                {
-                                    "text": {
-                                        "content": listing["Location"]
-                                    }
-                                }
-                            ]
+                            "select": {
+                                "name": listing.get("Location", "")
+                            }
                         },
                         "Price": {
                             "rich_text": [
                                 {
                                     "text": {
-                                        "content": listing["Price"]
+                                        "content": listing.get("Price", "")
                                     }
                                 }
                             ]
@@ -59,7 +58,7 @@ def create_notion_entry(total_pages):
                             "rich_text": [
                                 {
                                     "text": {
-                                        "content": listing["Available"]
+                                        "content": listing.get("Available", "")
                                     }
                                 }
                             ]
@@ -68,7 +67,7 @@ def create_notion_entry(total_pages):
                             "rich_text": [
                                 {
                                     "text": {
-                                        "content": listing["Description"]
+                                        "content": listing.get("Description", "")[:2000]  # text limit
                                     }
                                 }
                             ]
@@ -76,6 +75,4 @@ def create_notion_entry(total_pages):
                     }
                 )
             except Exception as e:
-                print(f"{listing['URL']} failed")
-
-create_notion_entry(4)
+                print(f"{listing['URL']} failed with error: {e}")

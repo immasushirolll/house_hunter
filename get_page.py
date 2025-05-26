@@ -1,5 +1,5 @@
 import requests
-from datetime import date
+from datetime import datetime
 from interactions import listings_form, next_page
 import re
 from html.parser import HTMLParser
@@ -11,9 +11,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 from utils import *
 
-def get_pages():
-    url = "https://offcampus.uwo.ca/Listings/"
-
+def get_pages(url: str = "https://offcampus.uwo.ca/Listings/"):
     # start driver
     page_num = 1
     options = Options()
@@ -38,28 +36,27 @@ def get_pages():
 
     total_pages = int(driver.find_element(By.CSS_SELECTOR, "input.total_pages").get_attribute("value"))
     print('Num pages', total_pages)
-    today = date.today()
+    today = datetime.now()
     print("Today's date:", today)
 
     # for number of results, get the next page
     driver = next_page(driver, total_pages)
-    
+    driver.quit()
     # ------ Now we clean the html and get the data ------
     # instead of getting the per page response, we will read the response from the local saved files instead
     page_content = ""
     parser = AddressParser()
 
-    for page_num in range(1, total_pages+1):
+    for page_num in range(1, 2):
         with open(f"raw_output/filtered_page_{page_num}.html", "r", encoding="utf-8") as f:
             page_content = f.read()
             parser.feed(page_content)
-            json_output = json.dumps(parser.listings, indent=4)
+            listings = parser.listings
+            listings = [listing for listing in listings if listing.get("URL") != ""]
+            json_output = json.dumps(listings, indent=4)
             json_output = json_output.replace("{},", "")
-            # json_ouput = json.dumps(json_output_str, indent=4)
             with open(f"cleaned_output/cleaned_output_{page_num}.json", "w") as f:
                 f.write(json_output)
                 print(f'written successfully to cleaned_output/cleaned_output_{page_num}.html')
     
     return total_pages
-
-# get_pages()

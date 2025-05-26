@@ -1,4 +1,6 @@
 from html.parser import HTMLParser
+import json
+from html.parser import HTMLParser
 
 class AddressParser(HTMLParser):
     def __init__(self):
@@ -18,45 +20,42 @@ class AddressParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
 
-        # Start a new listing
         if tag == "div" and attrs.get("class") == "rental-listing":
             self.in_listing = True
             self.current = {}
-            
+
         if not self.in_listing:
             return
 
-        # Address link
         if tag == "a" and attrs.get("href", "").startswith("/Listings/Details"):
             if "background-image" in attrs.get("style", ""):
                 pass
             else:
                 self.in_Address = True
+                self.current["ID"] = str(attrs["href"]).split("/")[-1]
                 self.current["URL"] = "https://offcampus.uwo.ca" + str(attrs["href"])
 
-        # Location
         if tag == "a" and attrs.get("class") == "location_map_link":
             self.in_Location = True
 
-        # Rent
         if tag == "h3":
             self.in_rent = True
 
-        # Availability
         if tag == "h4":
             self.in_availability = True
 
-        # Description
         if tag == "p":
             self.in_Description = True
 
     def handle_endtag(self, tag):
         if tag == "div" and self.in_listing:
-            # End of listing block
-            self.in_listing = False
+            for field in ["ID", "URL", "Address", "Location", "Price", "Available", "Description"]:
+                self.current.setdefault(field, "")
+
             self.listings.append(self.current)
             self.reset_flags()
 
+        # reset parsing state
         self.in_Address = False
         self.in_Location = False
         self.in_rent = False
