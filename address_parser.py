@@ -1,6 +1,7 @@
 from html.parser import HTMLParser
 import json
 from html.parser import HTMLParser
+from datetime import datetime
 
 class AddressParser(HTMLParser):
     def __init__(self):
@@ -80,3 +81,5 @@ class AddressParser(HTMLParser):
             self.current["Available"] = data
         elif self.in_Description:
             self.current["Description"] = self.current.get("Description", "") + data + " "
+        
+        self.current['Timestamp'] = datetime.now()

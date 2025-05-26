@@ -71,8 +71,15 @@ def create_notion_entry(total_pages):
                                     }
                                 }
                             ]
+                        },
+                        "Date": {
+                            "date": 
+                                {
+                                    "start": listing.get("Timestamp", "")
+                                }
+                            
                         }
                     }
                 )
             except Exception as e:
-                print(f"{listing['URL']} failed with error: {e}")
+                print(f"{listing.get("URL", "")} failed with error: {e}")
