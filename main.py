@@ -2,7 +2,7 @@ from address_parser import AddressParser
 import json
 import requests
 from notion_client import Client
-from write_to_notion import create_notion_entry
+from notion_actions import create_notion_entry
 from get_page import get_pages
 
 NOTION_TOKEN = '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'

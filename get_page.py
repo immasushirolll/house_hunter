@@ -1,15 +1,12 @@
 import requests
 from datetime import datetime
 from interactions import listings_form, next_page
-import re
-from html.parser import HTMLParser
 import json
 from address_parser import AddressParser
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
-from utils import *
 
 def get_pages(url: str = "https://offcampus.uwo.ca/Listings/"):
     # start driver
