@@ -72,7 +72,7 @@ def create_notion_entry(total_pages):
                                 }
                             ]
                         },
-                        "Date": {
+                        "ScanDate": {
                             "date": 
                                 {
                                     "start": listing.get("Timestamp", "")
@@ -82,86 +82,105 @@ def create_notion_entry(total_pages):
                     }
                 )
             except Exception as e:
-                print(f"{listing.get("URL", "")} failed with error: {e}")
+                with open("failed_pages.txt", "a") as error_file:
+                    error_file.write(f"{listing} failed with error: {e}\n\n")
 
-def delete_all_entries():
-    notion = Client(auth=NOTION_TOKEN)
+# notion = Client(auth=NOTION_TOKEN)
 
-    notion.pages.update(
-        page_id="1e8ccd117875800aa865000c4e4cffdd",  # NOT the database_id, but the parent page that holds the database
-        archived=True
-    )
+# # Replace with the page where you want to create the database
+# parent_page_id = "1e8ccd1178758003b76eeb02b7f3d73b"
 
-    new_db = notion.databases.create(
-                parent={"type": "page_id", "page_id": "1e8ccd117875800aa865000c4e4cffdd"},
-                title=[{"type": "text", "text": {"content": "My New Database"}}],
-                properties={
-                        "ID": {
-                            "title": [
-                                {}
-                            ]
-                        },
-                        "URL": {
-                            "url": {}
-                        },
-                        "Address": {
-                            "rich_text": {}
-                        },
-                        "Location": {
-                            "select": {}
-                        },
-                        "Price": {
-                            "rich_text": [
-                                {}
-                            ]
-                        },
-                        "Available": {
-                            "rich_text": [
-                                {}
-                            ]
-                        },
-                        "Description": {
-                            "rich_text": [
-                                {}
-                            ]
-                        },
-                        "Date": {
-                            "date": {}
-                    }
-                }
-            )
+# # Create a new database
+# new_database = notion.databases.create(
+#     parent={"type": "page_id", "page_id": parent_page_id},
+#     title=[{
+#         "type": "text",
+#         "text": {"content": "House Hunter"}
+#     }],
+#     properties={
+#         "ID": {
+#             "title": [
+#                 {
+#                     "text": {}
+#                 }
+#             ]
+#         },
+#         "URL": {
+#             "url": ''
+#         },
+#         "Address": {
+#             "rich_text": [
+#                 {
+#                     "text": {
+#                         "content": ''
+#                     }
+#                 }
+#             ]
+#         },
+#         "Location": {
+#             "select": {
+#                 "name": ''}
+#         },
+#         "Price": {
+#             "rich_text": [
+#                 {
+#                     "text": {}
+#                 }
+#             ]
+#         },
+#         "Available": {
+#             "rich_text": [
+#                 {
+#                     "text": {}
+#                 }
+#             ]
+#         },
+#         "Description": {
+#             "rich_text": [
+#                 {
+#                     "text": {}
+#                 }
+#             ]
+#         },
+#         "ScanDate": {
+#             "date": 
+#                 {}
+            
+#         }
+#     }
+# )
+
+# print(f"Created database: {new_database['id']}")
 
 
-def drop_duplicates():
-    notion = Client(auth=NOTION_TOKEN)
-    results = notion.databases.query(database_id=DATABASE_ID)
+# def drop_duplicates():
+#     notion = Client(auth=NOTION_TOKEN)
+#     results = notion.databases.query(database_id=DATABASE_ID)
 
-    seen_urls = set()
-    start_cursor = None
+#     seen_urls = set()
+#     start_cursor = None
 
-    while True:
-        response = notion.databases.query(
-            database_id=DATABASE_ID,
-            start_cursor=start_cursor
-        )
-        pages = response.get("results", [])
+#     while True:
+#         response = notion.databases.query(
+#             database_id=DATABASE_ID,
+#             start_cursor=start_cursor
+#         )
+#         pages = response.get("results", [])
 
-        for page in pages:
-            props = page["properties"]
-            page_id = page["id"]
+#         for page in pages:
+#             props = page["properties"]
+#             page_id = page["id"]
 
-            ID = props.get("URL", {}).get("url")
+#             ID = props.get("URL", {}).get("url")
 
-            if url in seen_urls:
-                # Duplicate detected, archive this page
-                notion.pages.update(page_id=page_id, archived=True)
-                print(f"Archived duplicate: {url}")
-            else:
-                seen_urls.add(url)
+#             if url in seen_urls:
+#                 # Duplicate detected, archive this page
+#                 notion.pages.update(page_id=page_id, archived=True)
+#                 print(f"Archived duplicate: {url}")
+#             else:
+#                 seen_urls.add(url)
 
-        if response.get("has_more"):
-            start_cursor = response["next_cursor"]
-        else:
-            break
-
-delete_all_entries()
+#         if response.get("has_more"):
+#             start_cursor = response["next_cursor"]
+#         else:
+#             break

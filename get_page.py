@@ -12,7 +12,7 @@ def get_pages(url: str = "https://offcampus.uwo.ca/Listings/"):
     # start driver
     page_num = 1
     options = Options()
-    options.add_argument("--headless")  # Remove this if you want to see the browser
+    options.add_argument("--headless")  # suppresses browser pop up
     driver = webdriver.Chrome(options=options)
     driver.get(url)
     time.sleep(1)  # Wait for page to load
