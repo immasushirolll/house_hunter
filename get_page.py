@@ -7,8 +7,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
+import pprint
 
-def get_pages(url: str = "https://offcampus.uwo.ca/Listings/"):
+def get_pages(url: str = "https://offcampus.uwo.ca/listings/"):
     # start driver
     page_num = 1
     options = Options()
@@ -33,8 +34,8 @@ def get_pages(url: str = "https://offcampus.uwo.ca/Listings/"):
 
     total_pages = int(driver.find_element(By.CSS_SELECTOR, "input.total_pages").get_attribute("value"))
     print('Num pages', total_pages)
-    today = datetime.now()
-    print("Today's date:", today)
+    # today = datetime.now()
+    # print("Today's date:", today)
 
     # for number of results, get the next page
     driver = next_page(driver, total_pages)
@@ -44,13 +45,15 @@ def get_pages(url: str = "https://offcampus.uwo.ca/Listings/"):
     page_content = ""
     parser = AddressParser()
 
-    for page_num in range(1, 2):
+    for page_num in range(1, 1):
+        print(page_num)
         with open(f"raw_output/filtered_page_{page_num}.html", "r", encoding="utf-8") as f:
             page_content = f.read()
             parser.feed(page_content)
             listings = parser.listings
             listings = [listing for listing in listings if listing.get("URL") != ""]
             json_output = json.dumps(listings, indent=4)
+            pprint.pprint(json_output)
             json_output = json_output.replace("{},", "")
             with open(f"cleaned_output/cleaned_output_{page_num}.json", "w") as f:
                 f.write(json_output)

@@ -7,7 +7,7 @@ from get_page import get_pages
 
 
 def main():
-    url = "https://offcampus.uwo.ca/Listings/"
+    url = "https://offcampus.uwo.ca/listings/"
     num_pages = get_pages(url)
     create_notion_entry(num_pages)
 
